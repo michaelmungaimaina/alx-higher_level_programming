@@ -7,6 +7,7 @@ Defaults size to 0. Raise error on invalid size inputs.
 Method area returns size of area of the square.
 """
 
+
 class Square:
     """A class that defines a square by size and can compute area"""
     def __init__(self, size=0):
