@@ -44,15 +44,6 @@ def matrix_mul(m_a, m_b):
         row_len.append(len(row))
     if not all(elem == row_len[0] for elem in row_len):
         raise TypeError("each row of m_b must should be of the same size")
-    """Check if each row of m_a has the same size"""
-    row_len_a = [len(row) for row in m_a]
-    if not all(elem == row_len_a[0] for elem in row_len_a):
-        raise TypeError("each row of m_a must be of the same size")
-
-    """Check if each row of m_b has the same size"""
-    row_len_b = [len(row) for row in m_b]
-    if not all(elem == row_len_b[0] for elem in row_len_b):
-        raise TypeError("each row of m_b must be of the same size")
 
     a_col = 0
     for col in m_a[0]:
