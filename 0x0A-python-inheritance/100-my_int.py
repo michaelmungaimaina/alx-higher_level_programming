@@ -1,32 +1,17 @@
 #!/usr/bin/python3
 
+
+"""
+A module with a class that inherits from the `int` class and inverts
+the `==` and `!=` operators
+"""
+
+
 class MyInt(int):
-    """
-    A rebellious subclass of int that inverts the behavior of
-    the equality and inequality operators.
-    """
+    """Inverts the `==` and `!=` operators"""
 
-    def __eq__(self, other):
-        """
-        Overrides the equality operator.
+    def __eq__(self, __value: object) -> bool:
+        return super().__ne__(__value)
 
-        Args:
-            other (int): The object to compare against.
-
-        Returns:
-            bool: True if the objects are not equal, False otherwise.
-        """
-        return super().__ne__(other)
-
-    def __ne__(self, other):
-        """
-        Overrides the inequality operator.
-
-        Args:
-            other (int): The object to compare against.
-
-        Returns:
-            bool: True if the objects are equal, False otherwise.
-        """
-        return super().__eq__(other)
-
+    def __ne__(self, __value: object) -> bool:
+        return super().__eq__(__value)
