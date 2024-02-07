@@ -32,6 +32,3 @@ def generate_log_entries(num_entries=10000):
         )
         sys.stdout.flush()
 
-if __name__ == "__main__":
-    generate_log_entries()
-
