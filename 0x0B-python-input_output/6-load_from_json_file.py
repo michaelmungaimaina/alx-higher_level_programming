@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import json
 
 def load_from_json_file(filename):
     """
@@ -10,7 +11,8 @@ def load_from_json_file(filename):
     Returns:
         any: The Python object loaded from the JSON file.
     """
-    import json
+
+
     with open(filename, encoding="utf-8") as fd:
         return json.load(fd)
 
