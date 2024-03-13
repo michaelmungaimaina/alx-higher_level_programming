@@ -1,2 +1,2 @@
 -- prints all the databases on the server
-SHOW databases;
+SHOW DATEBASES;
